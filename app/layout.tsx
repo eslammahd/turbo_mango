@@ -1,15 +1,18 @@
 import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
 import './globals.css';
 
+const inter = Inter({ subsets: ['latin'] });
+
 export const metadata: Metadata = {
-  title: 'Dr. Saad El Mahdy — Online Therapy',
-  description: 'Book an online therapy session with Dr. Saad El Mahdy. Serving patients in Egypt via Instapay & Vodafone Cash.',
+  title: 'Dr. Saad El Mahdy — Book a Session',
+  description: 'Book an online therapy session with Dr. Saad El Mahdy. Easy booking, flexible slots, pay offline via Instapay or Vodafone Cash.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="bg-gray-50 font-sans text-gray-800 antialiased">{children}</body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
